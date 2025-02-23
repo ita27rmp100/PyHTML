@@ -9,16 +9,53 @@ Implement HTML code using python, with giving the logic of programming - used in
 </ul>
 <h2>Different ways to implement :</h2>
 <ol type='A'>
-    <li>Run the 'intrept.py' file with write '#start' and '#end' at the end and begginnig of code;look at the images folder and 'WithIntrept.py' file to understand more.</li>
-    <li>Store each code structure in variables and then use the functions run&save -from 'oop.py',
-    ;look at the images folder and 'WithVars.py' file to understand more.</li>
+    <li>Using intrepting method, by runing "intrept.py" file.</li>
+    <li>Store the code in variables, then using the function run (as you see in previews).</li>
 </ol>
+<h2>Steps to use each way :</h2>
+<table>
+    <tr>
+        <th>With intrepting method :</th>
+        <th>With variables :</th>
+    <tr>
+    <tr>
+        <td>
+            from oop import HTMLTags as t
+        </td>
+        <td>
+            from oop import HTMLTags as t
+            from oop import FileHandling as hf
+        </td>
+    </tr>
+    <tr>
+        <td>
+            #start 
+                < your code >
+            #end
+        </td>
+        <td>
+            < variable name > = < PyHTML code >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>In console :</b>
+                python intrept.py 
+                => write the FileName (without extension) you wanna extension.
+        </td>
+        <td>
+            <b>In The end of file :</b>
+            hf.run(VarNAme,"<file name>")
+        </td>
+    </tr>
+</table>
 <h2>The benifits of this project :</h2>
 <ul>
-    <li>Good way to create webpages using python for those who hate html jjj. </li>
-    <li>In second way, you can use programming basics like conditions and loops in create the pages.</li>
+    <li>Good way to create webpages using python for those who hate html :) </li>
+    <li>In second way, you can use programming basics like conditions and loops to create the pages.</li>
+    <li>Create many files in the same python file (see it in previews folder).</li>
     <li>Trying to edit on the code is good way that help you think better to solve problems and understand more the basics.</li>
 </ul>
 <q>
-    <b>Note : </b>the project isn't ideal, there is many changes should be done in it, so I'll be so happy to see your pull requests on this GitHub repository
+    <b>Note : </b>the project isn't ideal, there is many changes should be done on it, so I'll be so happy to see your pull requests on this GitHub repository.
 </q>
