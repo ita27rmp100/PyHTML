@@ -31,6 +31,7 @@ Implement HTML code using python, with giving the logic of programming - used in
         <td>
             #start 
                 < your code >
+                (seperate between functions -that represent tags in html- with ';' )
             #end
         </td>
         <td>
@@ -42,10 +43,11 @@ Implement HTML code using python, with giving the logic of programming - used in
             <b>In console :</b>
                 python intrept.py 
                 => write the FileName (without extension) you wanna extension.
+                => enter '$stop$' to exit the console of PyHTMl.
         </td>
         <td>
             <b>In The end of file :</b>
-            hf.run(VarNAme,"<file name>")
+            hf.run(VarNAme,"< file name >")
         </td>
     </tr>
 </table>
