@@ -7,23 +7,30 @@ class HTMLTags:
         x = ""
         for i in args: x += str (i) + "\n"
         return f"<html> \n {x} \r </html>"
-    def MainChild(type="",properties = "", *args):
+    def MainChild(type="",properties ={}, *args):
         x = ""
+        propertiesSTR = ''
+        for i in properties.keys() :
+            propertiesSTR += f"{i}='{properties[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f"""<{type} {properties}> \n {x} \r </{type}> """
+        return f"""<{type} {propertiesSTR}> \n {x} \r </{type}> """
     # General head tags
     def title(title):
         return f"""<title> {title} </title>"""
     def meta(properties ={}, *args):
         x = ""
         propertiesSTR = ''
-        for 
+        for i in properties.keys() :
+            propertiesSTR += f"{i}='{properties[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f""" <meta {properties} "> {x} </meta>"""
-    def link(properties = "", *args):
+        return f""" <meta {propertiesSTR} "> {x} </meta>"""
+    def link(properties = {}, *args):
         x = ""
+        propertiesSTR = ''
+        for i in properties.keys() :
+            propertiesSTR += f"{i}='{properties[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f"""<link {properties}"> {x} </link> """
+        return f"""<link {propertiesSTR}"> {x} </link> """
     def JsCss(type="style",*args):
         x = ""
         for i in range (len (args)): x += args [i] + "\n"
@@ -34,10 +41,13 @@ class HTMLTags:
         for i in args: x += str (i) + "\n"
         return f"<!-- {x} \r -->"
     # for other tags
-    def tag(name, properties = "", *args):
+    def tag(name,properties={},*args):
         x = ""
+        propertiesSTR = ''
+        for i in properties.keys() :
+            propertiesSTR += f"{i}='{properties[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f"""<{name} {properties}> \n {x} \r </{name}>"""
+        return f"""<{name} {propertiesSTR}> \n {x} \r </{name}>"""
 class FileHandling : 
     def save(content,fileName) :
         with open(f"./htmls/{fileName}.html", mode="w") as file :

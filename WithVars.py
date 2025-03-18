@@ -3,14 +3,19 @@ from oop import FileHandling as hf
 
 tryCode = t.DOCTYPE_html()+t.html(
         t.MainChild(
-            "head","",
+            "head",{},
             t.title("test")
         ),
         t.MainChild(
-            "body","",        
+            "body",{},        
             t.tag(
-                "div","",
-                t.tag("h1","","hello world")
+                "div",{},
+                t.tag("h1",{},"hello world"),
+                t.tag("a",{"href":"https://www.google.com"},"google"),
+                t.tag("img",{
+                    "src":'google.png',
+                    "alt":"google logo"
+                })
             )
     ))
 # To run directly inside the file you had written your PyHTML code.
