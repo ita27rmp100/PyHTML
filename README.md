@@ -1,5 +1,5 @@
 # PyHTML
-<h2>General Idea :</h2>
+<h2>Overview :</h2>
 Implement HTML code using python, with giving the logic of programming - used in python - such that loops, conditions, variables ... etc.  
 <h2>Fondation of the project :</h2>
 <ul>

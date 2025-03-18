@@ -14,8 +14,10 @@ class HTMLTags:
     # General head tags
     def title(title):
         return f"""<title> {title} </title>"""
-    def meta(properties = "", *args):
+    def meta(properties ={}, *args):
         x = ""
+        propertiesSTR = ''
+        for 
         for i in range (len (args)): x += args [i] + "\n"
         return f""" <meta {properties} "> {x} </meta>"""
     def link(properties = "", *args):
