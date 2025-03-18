@@ -7,30 +7,30 @@ class HTMLTags:
         x = ""
         for i in args: x += str (i) + "\n"
         return f"<html> \n {x} \r </html>"
-    def MainChild(type="",properties ={}, *args):
+    def MainChild(type="",attr ={}, *args):
         x = ""
-        propertiesSTR = ''
-        for i in properties.keys() :
-            propertiesSTR += f"{i}='{properties[i]}' "
+        attrSTR = ''
+        for i in attr.keys() :
+            attrSTR += f"{i}='{attr[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f"""<{type} {propertiesSTR}> \n {x} \r </{type}> """
+        return f"""<{type} {attrSTR}> \n {x} \r </{type}> """
     # General head tags
     def title(title):
         return f"""<title> {title} </title>"""
-    def meta(properties ={}, *args):
+    def meta(attr ={}, *args):
         x = ""
-        propertiesSTR = ''
-        for i in properties.keys() :
-            propertiesSTR += f"{i}='{properties[i]}' "
+        attrSTR = ''
+        for i in attr.keys() :
+            attrSTR += f"{i}='{attr[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f""" <meta {propertiesSTR} "> {x} </meta>"""
-    def link(properties = {}, *args):
+        return f""" <meta {attrSTR} "> {x} </meta>"""
+    def link(attr = {}, *args):
         x = ""
-        propertiesSTR = ''
-        for i in properties.keys() :
-            propertiesSTR += f"{i}='{properties[i]}' "
+        attrSTR = ''
+        for i in attr.keys() :
+            attrSTR += f"{i}='{attr[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f"""<link {propertiesSTR}"> {x} </link> """
+        return f"""<link {attrSTR}"> {x} </link> """
     def JsCss(type="style",*args):
         x = ""
         for i in range (len (args)): x += args [i] + "\n"
@@ -41,13 +41,13 @@ class HTMLTags:
         for i in args: x += str (i) + "\n"
         return f"<!-- {x} \r -->"
     # for other tags
-    def tag(name,properties={},*args):
+    def tag(name,attr={},*args):
         x = ""
-        propertiesSTR = ''
-        for i in properties.keys() :
-            propertiesSTR += f"{i}='{properties[i]}' "
+        attrSTR = ''
+        for i in attr.keys() :
+            attrSTR += f"{i}='{attr[i]}' "
         for i in range (len (args)): x += args [i] + "\n"
-        return f"""<{name} {propertiesSTR}> \n {x} \r </{name}>"""
+        return f"""<{name} {attrSTR}> \n {x} \r </{name}>"""
 class FileHandling : 
     def save(content,fileName) :
         with open(f"./htmls/{fileName}.html", mode="w") as file :
